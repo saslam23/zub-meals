@@ -5,7 +5,17 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 
-export default function ActionAreaCard() {
+
+
+interface DataCardProps {
+  data:{
+    id:number;
+   title: string;
+   value: any | undefined;
+
+  } 
+ }
+const InfoCard: React.FC<DataCardProps> = ({ data}) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
@@ -28,3 +38,5 @@ export default function ActionAreaCard() {
     </Card>
   );
 }
+
+export default InfoCard;
