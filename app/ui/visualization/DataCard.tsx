@@ -8,30 +8,19 @@ import CardActionArea from '@mui/material/CardActionArea';
 
 
 interface DataCardProps {
-  data:{
-    id:number;
    title: string;
-   value: any | undefined;
-
-  } 
+   value: any | undefined; 
  }
-const InfoCard: React.FC<DataCardProps> = ({ data}) => {
+const InfoCard: React.FC<DataCardProps> = ({ title, value}) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth:500, width:450}}>
       <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
-          alt="green iguana"
-        />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Lizard
+            {title}
           </Typography>
-          <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+          <Typography variant="h6" sx={{ color: 'text.secondary' }}>
+            {value}
           </Typography>
         </CardContent>
       </CardActionArea>
