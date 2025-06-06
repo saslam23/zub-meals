@@ -66,8 +66,8 @@ export default function SideNav({ data, window }: DashboardLayoutProps) {
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
-          backgroundColor: '#83cffc', // Your custom color
-    color: '#000000',   
+          backgroundColor: '#789E87', // Your custom color
+    color: '#ffffff',   
         }}
       >
         <Toolbar>

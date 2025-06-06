@@ -13,8 +13,7 @@ interface DataCardProps {
  }
 const InfoCard: React.FC<DataCardProps> = ({ title, value}) => {
   return (
-    <Card sx={{ maxWidth:500, width:450}}>
-      <CardActionArea>
+    <Card sx={{ maxWidth:500, width:450, borderRadius: '30px' }}>
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {title}
@@ -23,7 +22,6 @@ const InfoCard: React.FC<DataCardProps> = ({ title, value}) => {
             {value}
           </Typography>
         </CardContent>
-      </CardActionArea>
     </Card>
   );
 }

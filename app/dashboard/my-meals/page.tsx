@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 import { Container, Grid, Card, CardContent, Typography, CardHeader,
   Chip} from '@mui/material';
 import cardTestData from "../../lib/cardData";
-
+import CutoffClock from "@/app/ui/CutoffClock";
 
 const bundles = [
   {
@@ -28,6 +28,8 @@ const MyMeals = () => {
 
     return(
         <>
+
+        <CutoffClock />
         <div style={{marginTop:'30px', display:'flex', flexDirection:'column', gap:"25px", justifyContent:'space-evenly'}}>
       <Grid  container width={'100%'}   direction="row"
   sx={{
@@ -43,11 +45,11 @@ const MyMeals = () => {
         ))
     }
       </Grid>
-
+<Typography variant="h3" fontWeight="bold" sx={{ marginTop: 4 }}>Your Orders</Typography>
       <Grid container spacing={3}>
       {bundles.map((bundle) => (
         <Grid size={{xs:12, sm:6, md:4}} key={bundle.id}>
-          <Card elevation={3}>
+          <Card sx={{borderRadius:'30px'}} elevation={3}>
             <CardHeader
               title={` ${bundle.size} Meals Bundle`}
               subheader={`Purchased on ${new Date(

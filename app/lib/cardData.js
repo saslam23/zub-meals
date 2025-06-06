@@ -1,8 +1,8 @@
 const cardTestData = [
     {
         id:0,
-        title:"Selected Bundle",
-        value:"7 Meals",
+        title:"Total Meals this Week",
+        value:"14 Meals",
     },
     {
         id:1,
